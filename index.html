@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fornello Menu | منيو فورنيللو</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Cairo:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--yellow:#FFC93C;--red:#E63B2E;--teal:#0FA3A3;--pink:#FF7AB6;--ink:#2A1B4D;--paper:#FFF8E7;--orange:#FF8A2B;--purple:#8B5CF6;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Cairo",system-ui,sans-serif;line-height:1.5}
+.hero{background:var(--red);color:var(--paper);text-align:center;padding:30px 20px 52px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:28px;background:radial-gradient(circle at 14px 0,transparent 14px,var(--paper) 15px) 0 0/28px 28px repeat-x}
+.hero svg{width:84px;height:84px}
+h1{font-family:"Bowlby One",Impact,sans-serif;font-weight:400;font-size:clamp(2.4rem,12vw,4.2rem);line-height:1;margin:0;color:var(--yellow);text-shadow:4px 4px 0 var(--ink);direction:ltr}
+.hero p{margin:10px auto 0;max-width:34ch;font-weight:700}
+.badge{display:inline-block;margin-top:12px;background:var(--yellow);color:var(--ink);border:3px solid var(--ink);border-radius:999px;padding:4px 16px;font-weight:900;box-shadow:3px 3px 0 var(--ink)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;gap:8px;overflow-x:auto;padding:12px 16px;background:var(--paper);border-bottom:3px solid var(--ink)}
+nav button{flex:none;font:900 .95rem "Cairo",sans-serif;border:3px solid var(--ink);background:#fff;color:var(--ink);border-radius:999px;padding:4px 16px;cursor:pointer}
+nav button[aria-pressed="true"]{background:var(--ink);color:var(--yellow)}
+nav button:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+main{max-width:720px;margin:0 auto;padding:4px 16px 36px}
+section{margin-top:26px;border:3px solid var(--ink);border-radius:20px;background:#fff;box-shadow:6px 6px 0 var(--ink);overflow:hidden}
+.head{display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:3px solid var(--ink);color:var(--ink)}
+.head svg{flex:none;width:64px;height:64px;margin-block:-4px}
+.head h2{margin:0;font-size:1.7rem;font-weight:900;line-height:1.2}
+.head small{display:block;font-size:.85rem;font-weight:700;opacity:.8}
+ul{list-style:none;margin:0;padding:6px 16px 10px}
+li{display:flex;align-items:center;gap:8px;padding:7px 0}
+li+li{border-top:2px dashed #ddd1ae}
+.nm{font-weight:700;font-size:1.05rem}
+.dot{flex:1;border-bottom:2px dotted #bba;min-width:12px;height:1px;align-self:center}
+.tag{font-size:.72rem;font-weight:900;color:#fff;border-radius:6px;padding:0 8px;margin-inline-start:6px;white-space:nowrap;vertical-align:middle}
+.tag.n{background:var(--teal)}.tag.c{background:var(--red)}
+.pr{flex:none;min-width:52px;text-align:center;background:var(--ink);color:var(--yellow);font-weight:900;border-radius:999px;padding:0 12px}
+footer{background:var(--ink);color:var(--paper);text-align:center;padding:26px 20px;font-weight:700}
+footer a{display:inline-block;margin:6px;background:var(--yellow);color:var(--ink);text-decoration:none;font-weight:900;border-radius:999px;padding:6px 18px;border:3px solid var(--paper)}
+footer a:focus-visible{outline:3px solid var(--pink)}
+footer small{display:block;margin-top:8px;opacity:.85}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="pizza" viewBox="0 0 100 100"><circle cx="50" cy="50" r="42" fill="#E8A83B" stroke="#2A1B4D" stroke-width="4"/><circle cx="50" cy="50" r="33" fill="#E63B2E"/><path d="M26 44q10-12 22-6t26 0q4 14-6 24t-26 6-16-24z" fill="#FFD84D"/><circle cx="38" cy="42" r="6" fill="#B3261E"/><circle cx="62" cy="48" r="6" fill="#B3261E"/><circle cx="48" cy="64" r="6" fill="#B3261E"/><circle cx="56" cy="32" r="3.5" fill="#4CB84C"/><circle cx="32" cy="58" r="3.5" fill="#4CB84C"/></symbol>
+<symbol id="burger" viewBox="0 0 100 100"><path d="M14 44a36 30 0 0 1 72 0z" fill="#E8902B" stroke="#2A1B4D" stroke-width="4"/><circle cx="35" cy="30" r="2.5" fill="#FFF8E7"/><circle cx="52" cy="24" r="2.5" fill="#FFF8E7"/><circle cx="66" cy="33" r="2.5" fill="#FFF8E7"/><path d="M10 50q8 8 16 0t16 0 16 0 16 0 16 0v-4H10z" fill="#4CB84C" stroke="#2A1B4D" stroke-width="4"/><path d="M14 56h72v6H14z" fill="#FFC93C" stroke="#2A1B4D" stroke-width="4"/><rect x="12" y="62" width="76" height="12" rx="6" fill="#7A3B1E" stroke="#2A1B4D" stroke-width="4"/><path d="M14 78h72a8 8 0 0 1-8 8H22a8 8 0 0 1-8-8z" fill="#E8902B" stroke="#2A1B4D" stroke-width="4"/></symbol>
+<symbol id="wrap" viewBox="0 0 100 100"><rect x="14" y="30" width="72" height="40" rx="20" transform="rotate(-20 50 50)" fill="#F6DDA8" stroke="#2A1B4D" stroke-width="4"/><ellipse cx="74" cy="34" rx="9" ry="14" transform="rotate(-20 74 34)" fill="#4CB84C" stroke="#2A1B4D" stroke-width="3"/><circle cx="72" cy="32" r="4" fill="#E63B2E"/><path d="M30 66q14 6 30-2" stroke="#E8902B" stroke-width="4" fill="none" transform="rotate(-8 50 60)"/></symbol>
+<symbol id="crepe" viewBox="0 0 100 100"><path d="M18 24L84 14 62 90z" fill="#F6DDA8" stroke="#2A1B4D" stroke-width="4" stroke-linejoin="round"/><path d="M28 30l50-8M34 42l36-6M40 54l22-4" stroke="#7A3B1E" stroke-width="5" stroke-linecap="round"/><circle cx="76" cy="26" r="9" fill="#FF7AB6" stroke="#2A1B4D" stroke-width="3"/></symbol>
+<symbol id="plate" viewBox="0 0 100 100"><ellipse cx="50" cy="62" rx="44" ry="26" fill="#fff" stroke="#2A1B4D" stroke-width="4"/><g stroke="#2A1B4D" stroke-width="2.5" fill="#FFD84D"><rect x="26" y="28" width="8" height="34" rx="3" transform="rotate(-12 30 45)"/><rect x="38" y="22" width="8" height="38" rx="3"/><rect x="50" y="26" width="8" height="36" rx="3" transform="rotate(8 54 44)"/></g><circle cx="62" cy="58" r="12" fill="#C97A2B" stroke="#2A1B4D" stroke-width="3"/><circle cx="40" cy="64" r="11" fill="#D88A38" stroke="#2A1B4D" stroke-width="3"/><circle cx="52" cy="70" r="5" fill="#4CB84C"/></symbol>
+</defs></svg>
+
+<header class="hero">
+  <svg viewBox="0 0 100 100"><use href="#pizza"/></svg>
+  <h1>FORNELLO</h1>
+  <p>نادي جامعة العاصمة – الصالة المغطاه</p>
+  <span class="badge">توصيل وخصم لطلاب المدن الجامعية</span>
+</header>
+
+<nav id="nav" aria-label="أقسام المنيو"></nav>
+<main id="menu"></main>
+
+<footer>
+  اطلب دلوقتي
+  <div><a href="tel:+201002485876"><bdi dir="ltr">0100 248 5876</bdi></a><a href="tel:+201124871523"><bdi dir="ltr">0112 487 1523</bdi></a></div>
+  <small>Instagram: <bdi dir="ltr">FORNELLO</bdi></small>
+</footer>
+
+<script>
+var N="n",C="c",TG={n:"جديد",c:"اختيار الشيف"};
+var D=[
+{t:"البيتزا",s:"pizza",bg:"#FF8A7E",p:"بيتزا ",i:[["مارجريتا",70],["مشكل جبن",90],["فراخ شاورما",95],["سوسيس",80],["سجق",80],["تشيكن رانش",100,N],["استريس",95],["مشكل لحوم",95],["بسطرمة",95],["تشيكن باربيكيو",100,N],["برجر",80],["بسطرمة كيري",95],["ميكس فراخ",110],["بيبروني",90],["مشروم",80]]},
+{t:"الكريب",s:"crepe",bg:"#FF9CC8",p:"كريب ",i:[["بطاطس",55],["فاهيتا فراخ",100],["ميكس فراخ",110],["زنجر",90],["بانيه",70],["استريبس",85],["كفتة",75],["سجق",75],["شيش طاووق",90],["برجر",70],["سوسيس",70],["شاورما فراخ",90],["ميكس جبن",75],["هوت دوج",70],["سوبر كرنشي",110],["نوتيلا",60],["نوتيلا موز",70]]},
+{t:"قسم السوري",s:"wrap",bg:"#7FE0DC",p:"",i:[["بطاطس",40],["فراخ بانيه",60],["استريبس",75],["كفتة",60],["سجق",60],["ميكس جبن",65],["شيش طاووق",70],["شاورما فراخ",80],["بطاطس جبنة",50],["سوسيس",65]]},
+{t:"قسم البرجر",s:"burger",bg:"#FFB36B",p:"",i:[["برجر كلاسيك جامبو",80],["برجر جبنة شيدر",85],["برجر بيض",80],["برجر ميكس جبن جامبو",90]]},
+{t:"قسم الفرنساوي",s:"plate",bg:"#FFC93C",p:"",i:[["ميكس فراخ",85],["ميكس لحوم",90],["شاورما فراخ",75],["بطاطس",35],["بانيه",50],["سجق",50],["زنجر",75],["هوت دوج",50],["شيش طاووق",80]]},
+{t:"قسم النجرسكو",s:"plate",bg:"#C4B0FF",p:"نجرسكو ",i:[["شاورما",85],["بانيه",80],["زنجر",80],["شيش",80]]}
+];
+var nav=document.getElementById("nav"),menu=document.getElementById("menu"),h="",nb='<button aria-pressed="true" data-k="all">الكل</button>';
+D.forEach(function(d,k){
+  nb+='<button aria-pressed="false" data-k="'+k+'">'+d.t.replace("قسم ","")+'</button>';
+  h+='<section data-k="'+k+'"><div class="head" style="background:'+d.bg+'"><svg viewBox="0 0 100 100"><use href="#'+d.s+'"/></svg><h2>'+d.t+'</h2></div><ul>';
+  d.i.forEach(function(x){
+    h+='<li><span class="nm">'+d.p+x[0]+(x[2]?'<span class="tag '+x[2]+'">'+TG[x[2]]+'</span>':'')+'</span><span class="dot"></span><span class="pr">'+x[1]+'</span></li>';
+  });
+  h+='</ul></section>';
+});
+nav.innerHTML=nb;menu.innerHTML=h;
+var bs=nav.querySelectorAll("button"),ss=menu.querySelectorAll("section");
+bs.forEach(function(b){b.addEventListener("click",function(){
+  bs.forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+  ss.forEach(function(s){s.hidden=!(b.dataset.k==="all"||s.dataset.k===b.dataset.k)});
+  window.scrollTo({top:0});
+})});
+</script>
+</body>
+</html>
